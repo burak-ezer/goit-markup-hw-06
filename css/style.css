@@ -9,16 +9,31 @@ header {
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
   color: #4d5ae5;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.sar_dsa {
+.sar_dsa,
+footer p {
   color: #2e2f42;
   padding: 24px 0;
   position: relative;
+
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2%;
+}
+
+footer p {
+  color: #f4f4fd;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2%;
 }
 
 .sak_dsa {
@@ -60,7 +75,7 @@ address a {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-a::after {
+.baslik-nav-ul a::after {
   color: #404bbf;
   content: '';
   width: 100%;
@@ -94,6 +109,7 @@ section.bolum-bir h1 {
   letter-spacing: 0.02em;
   color: #ffffff;
   max-width: 496px;
+  margin: 24px auto;
 }
 
 .bolum-dort {
@@ -118,7 +134,6 @@ footer {
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
   padding: 100px 0;
 }
 
@@ -151,6 +166,7 @@ h2 {
   letter-spacing: 0.03em;
   color: #4d5ae5;
   font-size: 18px;
+  text-transform: uppercase;
 }
 
 .svg-sinif {
@@ -225,8 +241,11 @@ img {
 
 .baslik-bar a {
   margin-right: 76px;
-  color: #404bbf;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.baslik-bar a::hover {
+  color: #404bbf;
 }
 
 .baslik-nav-ul {
@@ -243,6 +262,7 @@ ul {
 .baslik-adrress-ul {
   display: flex;
   gap: 40px;
+  align-items: center;
 }
 
 .bolum-bir {
@@ -349,6 +369,14 @@ footer div {
 
 .burak-asd {
   margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.burak-e {
+  display: flex;
+  flex-direction: column;
+  margin-left: 48px;
 }
 
 .footer-sosyalmedya a {
@@ -454,10 +482,6 @@ footer div {
   transform: translateY(0%);
 }
 
-svg {
-  fill: #f4f4fd;
-}
-
 .asd-bjk {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -466,6 +490,7 @@ svg {
   display: flex;
   justify-content: center;
   gap: 24px;
+  margin-top: 12px;
 }
 
 .burak-d {
@@ -738,4 +763,137 @@ label {
 
 p {
   margin: 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .svg-sinif {
+    display: none;
+  }
+
+  .burak-asd {
+    margin-right: 0px;
+  }
+
+  .liste-uc {
+    flex-wrap: wrap;
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  .ele-dort {
+    width: 288px;
+    height: 400px;
+    top: 5160px;
+    left: 16px;
+  }
+
+  .alt-bilgi .container,
+  .burak-b,
+  .subs-form {
+    flex-direction: column;
+  }
+
+  .eleman-iki {
+    width: 288px;
+    height: 120px;
+    gap: 8px;
+  }
+
+  .liste-iki {
+    flex-direction: column;
+  }
+
+  .liste-dort {
+    flex-wrap: wrap;
+  }
+
+  .eleman-uc {
+    width: 264px;
+    left: 28px;
+    gap: 72px;
+    margin: 0 auto;
+  }
+
+  .container {
+    width: 320px;
+  }
+
+  .modal-container {
+    width: 288px;
+    height: 640px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .svg-sinif {
+    display: none;
+  }
+
+  footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .burak-asd {
+    width: 264px;
+    height: 112px;
+    top: 4040px;
+    left: 108px;
+  }
+
+  .burak-e,
+  .burak-b {
+    margin: 0 auto;
+  }
+
+  .burak-b {
+    margin-bottom: 24px;
+  }
+
+  .liste-uc {
+    flex-wrap: wrap;
+    width: 528px;
+    margin: 0 auto;
+  }
+
+  .liste-dort {
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 736px;
+    height: 1516px;
+    top: 2332px;
+    left: 16px;
+  }
+
+  .liste-iki {
+    flex-wrap: wrap;
+    width: 736px;
+    margin: 0 auto;
+  }
+
+  .eleman-iki {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .ele-dort {
+    width: 356px;
+  }
+
+  .eleman-uc {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  body {
+    overflow-x: hidden;
+  }
 }
