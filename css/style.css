@@ -770,6 +770,17 @@ p {
     overflow-x: hidden;
   }
 
+  .baslik-bar {
+    align-items: center;
+    height: 56px;
+    border-bottom-width: 1px;
+  }
+
+  .baslik-nav-ul,
+  .baslik-adrress-ul {
+    display: none;
+  }
+
   .svg-sinif {
     display: none;
   }
@@ -820,6 +831,7 @@ p {
 
   .container {
     width: 320px;
+    justify-content: space-between;
   }
 
   .modal-container {
