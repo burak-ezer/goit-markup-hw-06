@@ -19,14 +19,58 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <script>
-      function closeFunc() {
-        document.getElementById("modal-window").style.display = "none";
-      }
-      </script>
   </head>
 
   <body>
+    <div class="mobile-menu" id="demo2">
+      <button class="but-on" type="button" onclick="document.getElementById('demo2').style.display = 'none'">
+        <svg height="8" width="8" class="icon-1">
+          <use href="./images/icons.svg#icon-close"></use></svg>
+      </button>
+      <div class="container">
+        <a href="">
+          Studio
+        </a>
+        <a href="">
+          Portfolio
+        </a>
+        <a href="">
+          Contacts
+        </a>
+      </div>
+      <div class="container2">
+        <a href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+              <a href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+      </div>
+      <ul class="social-liste">
+        <li class="social-eleman">
+          <a href="" class="asa-a"
+            ><svg height="24" width="24" class="icon-social">
+              <use href="./images/icons.svg#icon-facebook"></use></svg></a>
+        </li>
+        <li class="social-eleman">
+          <a href="" class="asa-a"
+            ><svg height="24" width="24" class="icon-social">
+              <use
+                href="./images/icons.svg#icon-instagram"
+              ></use></svg></a>
+        </li>
+        <li class="social-eleman">
+          <a href="" class="asa-a"
+            ><svg height="24" width="24" class="icon-social">
+              <use href="./images/icons.svg#icon-twitter"></use></svg></a>
+        </li>
+        <li class="social-eleman">
+          <a href="" class="asa-a"
+            ><svg height="24" width="24" class="icon-social">
+              <use href="./images/icons.svg#icon-linkedin"></use></svg></a>
+        </li>
+      </ul>
+    </div>
     <header class="baslik-bar">
       <div class="container">
         <nav class="baslik-nav">
@@ -53,12 +97,13 @@
             </li>
           </ul>
         </address>
-        <div class="mobile-menu">
+        <button type="button" id="mobile-menu-button" onclick="document.getElementById('demo2').style.display = 'block'">
           <img src="./images/menu.svg" alt="menu">
-        </div>
+        </button>
       </div>
     </header>
     <main>
+      
       <section class="bolum-bir">
         <div class="container">
           <h1 class="bjk-klu">Effective Solutions for Your Business</h1>
@@ -425,9 +470,9 @@
         </div>
       </div>
     </footer>
-    <div class="modal-window">
+    <div class="modal-window" id="demo">
       <div class="modal-container">
-        <button class="but-on" type="button" onclick="closeFunc()">
+        <button class="but-on" type="button" onclick="document.getElementById('demo').style.display = 'none'">
           <svg height="8" width="8" class="icon-1">
             <use href="./images/icons.svg#icon-close"></use></svg>
         </button>

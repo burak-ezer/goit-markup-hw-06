@@ -195,7 +195,8 @@ h2 {
   height: 16;
 }
 
-button {
+.send-buton,
+.bir-buton {
   background-color: #4d5ae5;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -212,11 +213,13 @@ button {
   border-radius: 4px;
 }
 
-button:hover {
+.send-buton:hover,
+.bir-buton:hover {
   background-color: #404bbf;
 }
 
-button:focus {
+.send-buton:focus,
+.bir-buton:focus {
   background-color: #404bbf;
 }
 address {
@@ -397,7 +400,8 @@ footer div {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.bolum-uc .eleman-uc .social-eleman a {
+.bolum-uc .eleman-uc .social-eleman a,
+.mobile-menu .social-eleman a {
   width: 100%;
   height: 100%;
   background-color: #4d5ae5;
@@ -408,11 +412,13 @@ footer div {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.bolum-uc .eleman-uc .social-eleman a:hover {
+.bolum-uc .eleman-uc .social-eleman a:hover,
+.mobile-menu .social-eleman a:hover {
   background-color: #404bbf;
 }
 
-.bolum-uc .eleman-uc .social-eleman a:focus {
+.bolum-uc .eleman-uc .social-eleman a:focus,
+.mobile-menu .social-eleman a:hover {
   background-color: #404bbf;
 }
 
@@ -636,6 +642,17 @@ label {
   fill: #4d5ae5;
 }
 
+#mobile-menu-button {
+  background-color: transparent;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+
+.is-open {
+  display: none;
+}
+
 .sinif-yorum {
   width: 100%;
   height: 120px;
@@ -761,6 +778,10 @@ label {
   margin-left: 16px;
 }
 
+.mobile-menu {
+  display: none;
+}
+
 p {
   margin: 0;
 }
@@ -768,6 +789,79 @@ p {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   body {
     overflow-x: hidden;
+  }
+
+  #mobile-menu-button {
+    display: block;
+  }
+
+  .mobile-menu .social-liste {
+    position: absolute;
+    width: 280px;
+    height: 40px;
+    top: 560px;
+    left: 16px;
+    gap: 40px;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+
+  .mobile-menu a:hover,
+  .mobile-menu .container a:hover {
+    color: #4d5ae5;
+  }
+
+  .mobile-menu .container {
+    position: absolute;
+    width: 151px;
+    height: 200px;
+    top: 72px;
+    left: 16px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-menu .container2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 193px;
+    height: 72px;
+    top: 440px;
+    left: 16px;
+    gap: 24px;
+  }
+
+  .mobile-menu .container2 a {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2%;
+    width: 193px;
+    height: 24px;
+  }
+
+  .mobile-menu .container a {
+    width: 148px;
+    height: 40px;
+
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 2%;
+    color: #2e2f42;
+  }
+
+  .mobile-menu {
+    display: none;
   }
 
   .baslik-bar {
