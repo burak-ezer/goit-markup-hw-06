@@ -19,6 +19,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script>
+      function closeFunc() {
+        document.getElementById("modal-window").style.display = "none";
+      }
+      </script>
   </head>
 
   <body>
@@ -420,7 +425,7 @@
     </footer>
     <div class="modal-window">
       <div class="modal-container">
-        <button class="but-on" type="button">
+        <button class="but-on" type="button" onclick="closeFunc()">
           <svg height="8" width="8" class="icon-1">
             <use href="./images/icons.svg#icon-close"></use></svg>
         </button>
